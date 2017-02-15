@@ -1,0 +1,37 @@
+
+public class printConsonants 
+	{
+
+	public static void main (String[] args)
+	{
+		String word = "jugg$234err";
+		printConsonants.getConsonants(word);
+	}
+
+	static void getConsonants(String word) 
+		{
+		  for (int index = 0; index < word.length(); index++) 
+		  {
+		    char consonant = word.charAt(index);
+		    if ((consonant == 'B') || (consonant == 'b') || (consonant == 'C') || (consonant == 'c')
+		    		|| (consonant == 'D') || (consonant == 'd') || (consonant == 'F') || (consonant == 'f')
+		    		|| (consonant == 'G') || (consonant == 'g') || (consonant == 'H') || (consonant == 'h')
+		    		|| (consonant == 'J') || (consonant == 'j') || (consonant == 'K') || (consonant == 'k')
+		    		|| (consonant == 'L') || (consonant == 'l') || (consonant == 'M') || (consonant == 'm')
+		    		|| (consonant == 'N') || (consonant == 'n') || (consonant == 'P') || (consonant == 'p')
+		    		|| (consonant == 'Q') || (consonant == 'q') || (consonant == 'R') || (consonant == 'r')
+		    		|| (consonant == 'S') || (consonant == 's') || (consonant == 'T') || (consonant == 't')
+		    		|| (consonant == 'V') || (consonant == 'v') || (consonant == 'W') || (consonant == 'w')
+		    		|| (consonant == 'X') || (consonant == 'x') || (consonant == 'Y') || (consonant == 'y')
+		    		|| (consonant == 'Z') || (consonant =='z'))
+		    //if ((consonant != 'a') && (consonant != 'e')
+		      //  && (consonant != 'i') && (consonant != 'o')
+		        //&& (consonant != 'u'))
+		    {
+		    	System.out.println(consonant);
+		    }
+		  }
+		  
+	}
+
+	}
