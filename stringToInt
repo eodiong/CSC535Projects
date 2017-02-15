@@ -4,24 +4,20 @@ public class changeStringToInt
 		public static void main (String[] args)
 			{
 				String myString = "127";
-				changeStringToInt.changeString(myString);
+				int a = changeStringToInt.changeString(myString);
+				System.out.println(a);
 			}
 
 			
 			//method definition
 		static int changeString(String myString)
 			{
-				for (int i = 0; i < myString.length(); i = i + 1) 
+				int answer = 0; 
+				for (int i = myString.length()-1; i >= 0;)
 				{
-					if (charAt(i) == "")
-					System.out.print();           
+					answer += (myString.charAt(i) - '0');
+					return answer;  		
 			    }
+				return answer;
 			}
-
-
-			private static String charAt(int i) {
-				// TODO Auto-generated method stub
-				return null;
-			}
-				 	
 	}
