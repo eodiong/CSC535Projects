@@ -1,0 +1,95 @@
+import java.util.*;
+
+public class MyFirstMergeSort2
+	{
+
+	public static void main (String []args) 
+		{
+		int [] ar = new int [6];
+		Random r = new Random ();
+		for (int i = 0; i < ar.length; i++)
+		{
+		ar[i] = r.nextInt(9) + 0;
+		}
+		System.out.println("List before sorting");
+		printIntArray(ar);
+		mergesort(ar);
+		System.out.println("\nList after sorting");
+		printIntArray(ar);
+		}
+
+	public static void printIntArray(int[] ar)
+		{
+		for (int i = 0; i < ar.length; i++)
+		{
+		System.out.print ((ar [i]) + " ");
+		}
+		}
+		 
+
+	public static void mergesort (int [] unsorted)
+		{
+		if (unsorted.length == 1)
+			{
+			return;
+			}
+			else
+			{
+			int midpoint = unsorted.length / 2;
+			 
+			int leftsize = midpoint;
+			 
+			int rightsize = unsorted.length - midpoint;
+			 
+			int [] left = new int[leftsize];
+			int [] right = new int [rightsize];
+			for (int i = 0; i < midpoint; i++)
+			{
+			left [i] = unsorted[i];
+			}
+			 
+			for (int i = (midpoint); i < unsorted.length; i++)
+			{
+			right [i-midpoint] = unsorted[i];
+			}
+			 
+			mergesort(left);
+			mergesort(right);
+			merge (left, right, unsorted);
+			}
+			}
+ 
+	public static void merge (int [] left, int [] right, int [] ar)
+		{
+		int leftsize = left.length;
+		int rightsize = right.length;
+		int i = 0, j = 0, k = 0;
+		while (i < leftsize && j < rightsize)
+		{
+		if (left[i] <= right[j])
+		{
+		ar[k] = left[i];
+		i++;
+		k++;
+		}
+		else
+		{
+		               ar[k] = right[j];
+		               k++;
+		               j++;
+		           }
+		}
+		       while (i < leftsize) 
+		       {
+		           ar[k] = left[i];
+		           k++;
+		           i++;
+		       }
+		       while (j < rightsize)
+		       {
+		           ar[k] = right[j];
+		           k++;
+		           j++;
+		}
+		}
+		}
